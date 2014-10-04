@@ -1,64 +1,73 @@
 <div class="dashboard">
-  <div class="panel panel-warning">
-    <div class="panel-heading"><h4>Distribute Fresh Honey!</h4></div>
-    <div class="panel-body">
-      <div class="row">
-
-        <div class="col-md-3">
-
-          <honey volume="10ml"></honey>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-2">
+        <img src="http://placehold.it/150x150">
+        <h5>Vibhor Mahajan</h5>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-warning">
+          <div class="panel-heading"><h4>Distribute Fresh Honey!</h4></div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3">
+                <honey volume="10ml"></honey>
+              </div>
+              <div class="col-md-9">
+                <form ng-submit="shareHoney(honeyShareInfo)">
+                  <input type="text" placeholder="who do you want to share it with? eg. @charlie" class="form-control"/>
+                  <input type="text" placeholder="reason? eg. increasing profitability by 20%." class="form-control"/>
+                  <input type="text" placeholder="core values demonstrated. eg. Excellence, Innovation..."
+                         class="form-control"/>
+                  <input type="submit" class="btn btn-primary"/>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-9">
-          <form ng-submit="shareHoney(honeyShareInfo)">
-            <input type="text" placeholder="who do you want to share it with? eg. @charlie" class="form-control"/>
-            <input type="text" placeholder="reason? eg. increasing profitability by 20%." class="form-control"/>
-            <input type="text" placeholder="core values demonstrated. eg. Excellence, Innovation..."
-                   class="form-control"/>
-            <input type="submit" class="btn btn-primary"/>
-          </form>
+
+        <div class="panel panel-warning">
+          <div class="panel-heading"><h4>My Honey Pots</h4></div>
+          <div class="panel-body">
+            <div class="row center-aligned my-honey-pots">
+              <div class="col-md-3">
+                <honey volume="10l"></honey>
+                <h4>Excellence</h4>
+              </div>
+              <div class="col-md-3">
+                <honey volume="0ml"></honey>
+                <h4>Innovation</h4>
+              </div>
+              <div class="col-md-3">
+                <honey volume="5l"></honey>
+                <h4>Teamwork</h4>
+              </div>
+              <div class="col-md-3">
+                <honey volume="1l"></honey>
+                <h4>Customer Delight</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="panel panel-warning">
-    <div class="panel-heading"><h4>Latest Activity in Hive</h4></div>
-    <div class="panel-body">
-      <div class="row">
+      <div class="col-md-4">
         <ul class="activity">
-          <li class="line-item" ng-repeat="feedItem in activityFeed">
-            <a href="" ng-bind="feedItem.receiver"></a> received honey from
-            <a href="" ng-bind="feedItem.provider"></a>
-            for <span ng-bind="feedItem.reason"></span>
-            <span class="text-muted timestamp" ng-bind="feedItem.created_at"></span>
-            <a href=""><i class="glyphicon glyphicon-new-window"></i></a>
+          <li class="line-item card" ng-repeat="feedItem in activityFeed">
+            <div class="row">
+              <div class="col-md-2"><img src="http://placehold.it/50x50"></div>
+              <div class="col-md-10">
+                <a href="" ng-bind="feedItem.receiver"></a> received honey from
+                <a href="" ng-bind="feedItem.provider"></a>
+                for <span ng-bind="feedItem.reason"></span>
+                <br/>
+                <span class="text-muted timestamp" ng-bind="feedItem.created_at"></span>
+                <a href=""><i class="glyphicon glyphicon-new-window"></i></a>
+              </div>
+            </div>
           </li>
         </ul>
         <div class="center-aligned center-block">
           <a href="" class="btn btn-primary btn-sm">older activity...</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel panel-warning">
-    <div class="panel-heading"><h4>My Honey Pots</h4></div>
-    <div class="panel-body">
-      <div class="row center-aligned my-honey-pots">
-        <div class="col-md-3">
-          <honey volume="10l"></honey>
-          <h4>Excellence</h4>
-        </div>
-        <div class="col-md-3">
-          <honey volume="0ml"></honey>
-          <h4>Innovation</h4>
-        </div>
-        <div class="col-md-3">
-          <honey volume="5l"></honey>
-          <h4>Teamwork</h4>
-        </div>
-        <div class="col-md-3">
-          <honey volume="1l"></honey>
-          <h4>Customer Delight</h4>
         </div>
       </div>
     </div>
