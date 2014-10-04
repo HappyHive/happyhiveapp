@@ -14,6 +14,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  .left-aligned {
+    text-align: left;
+  }
+  .center-aligned {
+    text-align: center;
+  }
+  .right-aligned {
+    text-align: right;
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -88,5 +97,47 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+
+  .honey {
+    position: relative;
+    margin: auto;
+
+    .honey-pot-image {
+      width: 100%;
+    }
+
+    .honey-pot-label {
+      position: absolute;
+      top: 45%;
+      font-size: 2.5em;
+      text-align: center;
+      display: block;
+      width: 100%
+    }
+  }
+  .activity {
+    list-style: none;
+    .line-item {
+      border-bottom: 1px solid rgb(229, 229, 229);
+      .timestamp {
+        font-size: .75em;
+      }
+    }
+  }
+
+  .actor {
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .dashboard {
+    .my-honey-pots {
+      .honey {
+        font-size: 10px;
+        width: 100px
+      }
+    }
   }
 }
