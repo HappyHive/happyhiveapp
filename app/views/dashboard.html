@@ -2,8 +2,10 @@
   <div class="row">
     <div class="col-md-12">
       <div class="col-md-2">
-        <img src="http://placehold.it/150x150">
-        <h5>Vibhor Mahajan</h5>
+        <div class="center-blocked center-aligned">
+          <img class="profile-pic" src="http://placehold.it/150x150">
+          <h4><strong>Vibhor Mahajan</strong></h4>
+        </div>
       </div>
       <div class="col-md-6">
         <div class="panel panel-warning">
@@ -14,12 +16,52 @@
                 <honey volume="10ml"></honey>
               </div>
               <div class="col-md-9">
-                <form ng-submit="shareHoney(honeyShareInfo)">
-                  <input type="text" placeholder="who do you want to share it with? eg. @charlie" class="form-control"/>
-                  <input type="text" placeholder="reason? eg. increasing profitability by 20%." class="form-control"/>
-                  <input type="text" placeholder="core values demonstrated. eg. Excellence, Innovation..."
-                         class="form-control"/>
-                  <input type="submit" class="btn btn-primary"/>
+                <form class="form-horizontal" role="form" ng-submit="shareHoney(honeyShareInfo)">
+                  <div class="form-group">
+                    <lable for="share-honey-who" class="control-label col-sm-2">To:</lable>
+                    <div class="col-sm-10">
+                      <ui-select id="share-honey-who" ng-model="person.selected">
+                        <ui-select-match placeholder="Who do you want to share it with?">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="person in people | filter:$select.search">
+                          <div class="row">
+                            <div class="col-md-2"><img src="http://placehold.it/40x40"/></div>
+                            <div class="col-md-10">
+                              <div ng-bind-html="person.name | highlight: $select.search"></div>
+                              <small>
+                                email: {{person.email}}
+                              </small>
+                            </div>
+                          </div>
+
+
+                        </ui-select-choices>
+                      </ui-select>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <lable for="share-honey-reason" class="control-label col-sm-2">Reason:</lable>
+                    <div class="col-sm-10">
+                      <input id="share-honey-reason" type="text"
+                             placeholder="Reason? eg. increasing profitability by 20%." class="form-control"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <lable for="share-honey-core-values" class="control-label col-sm-2">Values:</lable>
+                    <div class="col-sm-10">
+                      <ui-select id="share-honey-who" ng-model="coreValue.selected">
+                        <ui-select-match placeholder="Core values demonstrated">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="value in coreValues | filter:$select.search">
+                          <div ng-bind-html="value | highlight: $select.search"></div>
+                        </ui-select-choices>
+                      </ui-select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-primary"/>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
@@ -40,7 +82,7 @@
               </div>
               <div class="col-md-3">
                 <honey volume="5l"></honey>
-                <h4>Teamwork</h4>
+                <h4>Collaboration</h4>
               </div>
               <div class="col-md-3">
                 <honey volume="1l"></honey>
@@ -58,7 +100,7 @@
               <div class="col-md-10">
                 <a href="" ng-bind="feedItem.receiver"></a> received honey from
                 <a href="" ng-bind="feedItem.provider"></a>
-                for <span ng-bind="feedItem.reason"></span>
+                for <strong><span ng-bind="feedItem.reason"></span></strong>
                 <br/>
                 <span class="text-muted timestamp" ng-bind="feedItem.created_at"></span>
                 <a href=""><i class="glyphicon glyphicon-new-window"></i></a>

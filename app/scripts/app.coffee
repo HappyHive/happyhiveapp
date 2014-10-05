@@ -14,7 +14,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.select'
   ])
   .config ($routeProvider) ->
     $routeProvider
@@ -30,3 +31,6 @@ angular
       .otherwise
         redirectTo: '/'
 
+  .config((uiSelectConfig) ->
+    uiSelectConfig.theme = 'bootstrap'
+  )
