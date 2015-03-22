@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.select'
+    'ui.select',
+    'ui.bootstrap'
   ])
   .config ($routeProvider) ->
     $routeProvider
@@ -30,7 +31,6 @@ angular
         controller: 'DashboardCtrl'
       .otherwise
         redirectTo: '/'
-
   .config((uiSelectConfig) ->
     uiSelectConfig.theme = 'bootstrap'
   )
