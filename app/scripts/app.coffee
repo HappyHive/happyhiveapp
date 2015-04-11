@@ -29,6 +29,21 @@ angular
       .when '/dashboard',
         templateUrl: 'views/dashboard.html'
         controller: 'DashboardCtrl'
+      .when '/buzz',
+        templateUrl: 'views/buzz.html'
+        controller: 'BuzzCtrl'
+      .when '/rewards',
+        templateUrl: 'views/rewards.html'
+        controller: 'RewardsCtrl'
+      .when '/settings',
+        templateUrl: 'views/settings.html'
+        controller: 'SettingsCtrl'
+      .when '/help',
+        templateUrl: 'views/help.html'
+        controller: 'HelpCtrl'
+      .when '/profile',
+        templateUrl: 'views/profile.html'
+        controller: 'ProfileCtrl'
       .otherwise
         redirectTo: '/'
   .config((uiSelectConfig) ->

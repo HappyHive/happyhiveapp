@@ -25,7 +25,7 @@ angular.module('happyhiveappApp')
     {
       provider: "Pradeep"
       receiver: "Rajat"
-      reason: "hiring ace employees"
+      reason: "increasing the profitability of the company by 200%"
       created_at: "10/09/2014 1:50 PM"
     }
   ]

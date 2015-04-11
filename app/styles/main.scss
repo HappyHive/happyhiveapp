@@ -154,13 +154,12 @@ body {
   }
 }
 
-.glass_effect
-{
+.glass_effect {
   border: 5px solid #FFFFFF;
   margin: 50px;
   box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.3),
   0px 20px 15px 0px rgba(0, 0, 0, 0.6);
-  background-color: rgba(255,255,100,0.2);
+  background-color: rgba(255, 255, 100, 0.2);
 }
 
 .card {
@@ -169,8 +168,20 @@ body {
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
   -webkit-border-radius: 3px;
 }
+
 .navbar img.logo {
   height: 40px;
   margin-top: 7px;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.ui-select-toggle, .ui-select-toggle:hover {
+  background-color: #fff;
+  border: 2px solid #dce4ec;
+  color: #000;
+}
+
+@import "dashboard.scss";
