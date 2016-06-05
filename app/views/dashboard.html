@@ -5,10 +5,7 @@
         <div class="center-blocked text-center profile">
           <img class="profile-pic" src="http://placehold.it/150x150" title="Profile picture">
           <h4><strong>Vibhor Mahajan</strong></h4>
-          <img title="Badge" class="profile-badge" ng-src="http://placehold.it/30x30" alt="badge" ng-repeat="i in [1,2,3,4,5,6,7,8]"></img>
-          <p>
-            Sharing honey with your fellow bees for the first time unlocks the <strong>Mini Bee</strong> badge. Doing it the next 24 hours to win 10ml honey for Teamwork.
-          </p>
+
         </div>
       </div>
       <div class="col-md-6">
@@ -94,9 +91,6 @@
                 </table>
               </div>
             </div>
-            <p>
-              Congratulations! You can redeem your honey for <a href="">18 items</a> in the rewards store...
-            </p>
           </div>
         </div>
       </div>
@@ -105,8 +99,7 @@
           <li class="line-item card" ng-repeat="feedItem in activityFeed">
             <div class="row">
               <div class="col-md-1 text-center">
-                <a popover="Upvote" popover-placement="left" popover-trigger="mouseenter" ng-click="upvote(feedItem)"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                <a popover="Downvote" popover-placement="left" popover-trigger="mouseenter" ng-click="downvote(feedItem)"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                <a popover="Share Honey" popover-placement="bottom" popover-trigger="mouseenter" ng-click="upvote(feedItem)"><i class="glyphicon glyphicon-tint"></i></a>
               </div>
               <div class="col-md-2"><img src="http://placehold.it/50x50" title="Profile picture"></div>
               <div class="col-md-9">
